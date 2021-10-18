@@ -10,7 +10,7 @@ Go To Terminal and paste the following command:
 
 `git clone git@github.com:zainsadaqat/math-magicians.git`
 
-`cd math-magicianss`
+`cd math-magicians`
 
 `npm start`
 
