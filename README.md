@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Getting Started with Math Magician using Create React App
+
+Math Magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and Read a random math-related quote.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Steps to run the project in your local machine
+
+Go To Terminal and paste the following command:
+
+`git clone git@github.com:zainsadaqat/math-magicians.git`
+
+`cd math-magicianss`
+
+`npm start`
 
 ## Available Scripts
 
