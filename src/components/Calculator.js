@@ -10,7 +10,7 @@ class Calculator extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className="container">
         <main className="grid">
           <Button className="result" btnValue="0" />
 
