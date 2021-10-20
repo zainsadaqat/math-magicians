@@ -12,6 +12,8 @@ Go To Terminal and paste the following command:
 
 `cd math-magicians`
 
+`npm install`
+
 `npm start`
 
 ## Available Scripts
