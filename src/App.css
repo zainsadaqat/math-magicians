@@ -1,7 +1,11 @@
 * {
   box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.App {
+  padding: 1em;
 }
