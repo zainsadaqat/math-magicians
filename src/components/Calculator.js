@@ -1,42 +1,72 @@
 import React from 'react';
-import Button from './Button';
 import './Calculator.css';
+import calculate from '../logic/calculate';
+import Output from './Output';
+import Button from './Button';
+
+const generateResult = ({ total, next, operation }) => {
+  if (!total && !next && !operation) {
+    return 0;
+  }
+  if (!total && next) {
+    return `${next}`;
+  }
+  if (operation && total && !next) {
+    return `${total} ${operation}`;
+  }
+  if (total && next && operation) {
+    return `${total} ${operation} ${next}`;
+  }
+  return `${total}`;
+};
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: 0,
+      next: 0,
+      operation: null,
+    };
   }
 
+  clickEvent = (event) => {
+    const obj = this.state;
+    console.log(obj);
+    const { value } = event.target;
+    const resultObject = calculate(obj, value);
+    this.setState(resultObject);
+  };
+
   render() {
+    const outputVal = generateResult(this.state);
     return (
-      <section className="container">
-        <main className="grid">
-          <Button className="result" btnValue="0" />
-
-          <Button className="ac" btnValue="AC" />
-          <Button className="add-sub" btnValue="+/-" />
-          <Button className="modulus" btnValue="%" />
-          <Button className="divide operation" btnValue="÷" />
-
-          <Button className="seven" btnValue="7" />
-          <Button className="eight" btnValue="8" />
-          <Button className="nine" btnValue="9" />
-          <Button className="cross operation" btnValue="x" />
-
-          <Button className="four" btnValue="4" />
-          <Button className="five" btnValue="5" />
-          <Button className="six" btnValue="6" />
-          <Button className="minus operation" btnValue="-" />
-
-          <Button className="one" btnValue="1" />
-          <Button className="two" btnValue="2" />
-          <Button className="three" btnValue="3" />
-          <Button className="add operation" btnValue="+" />
-
-          <Button className="zero" btnValue="0" />
-          <Button className="dot" btnValue="." />
-          <Button className="equal operation" btnValue="=" />
+      <section className="calculator-container">
+        <main className="grid-container">
+          <Output outputval={outputVal} />
+          <Button className="ac" value="AC" clickEvent={this.clickEvent} />
+          <Button
+            className="add-sub"
+            value="+/-"
+            clickEvent={this.clickEvent}
+          />
+          <Button className="modulus" value="%" clickEvent={this.clickEvent} />
+          <Button className="divide" value="÷" clickEvent={this.clickEvent} />
+          <Button className="seven" value="7" clickEvent={this.clickEvent} />
+          <Button className="eight" value="8" clickEvent={this.clickEvent} />
+          <Button className="nine" value="9" clickEvent={this.clickEvent} />
+          <Button className="cross" value="x" clickEvent={this.clickEvent} />
+          <Button className="four" value="4" clickEvent={this.clickEvent} />
+          <Button className="five" value="5" clickEvent={this.clickEvent} />
+          <Button className="six" value="6" clickEvent={this.clickEvent} />
+          <Button className="minus" value="-" clickEvent={this.clickEvent} />
+          <Button className="one" value="1" clickEvent={this.clickEvent} />
+          <Button className="two" value="2" clickEvent={this.clickEvent} />
+          <Button className="three" value="3" clickEvent={this.clickEvent} />
+          <Button className="add" value="+" clickEvent={this.clickEvent} />
+          <Button className="zero" value="0" clickEvent={this.clickEvent} />
+          <Button className="dot" value="." clickEvent={this.clickEvent} />
+          <Button className="equal" value="=" clickEvent={this.clickEvent} />
         </main>
       </section>
     );
