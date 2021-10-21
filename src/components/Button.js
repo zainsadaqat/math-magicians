@@ -1,6 +1,5 @@
-import React from 'react';
-import './Button.css';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 class Button extends React.Component {
   constructor(props) {
@@ -9,17 +8,23 @@ class Button extends React.Component {
   }
 
   render() {
-    const { btnValue, className } = this.props;
+    const { value, clickEvent, className } = this.props;
     return (
-      <button type="button" className={`btn ${className}`}>
-        {btnValue}
+      <button
+        type="button"
+        className={className}
+        value={value}
+        onClick={clickEvent}
+      >
+        {value}
       </button>
     );
   }
 }
 
 Button.propTypes = {
-  btnValue: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  clickEvent: PropTypes.func.isRequired,
   className: PropTypes.string.isRequired,
 };
 
