@@ -43,7 +43,7 @@ class Calculator extends React.Component {
     return (
       <section className="calculator-container">
         <main className="grid-container">
-          <Output outputval={outputVal} />
+          <Output outputval={outputVal.toString()} />
           <Button className="ac" value="AC" clickEvent={this.clickEvent} />
           <Button
             className="add-sub"
