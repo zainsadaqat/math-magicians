@@ -91,6 +91,7 @@ export default function calculate(obj, buttonName) {
 
   // When the user presses an operation button without having entered
   // a number first, do nothing.
+  // This if statement was commented before that caused app crash
   if (!obj.next && !obj.total) {
     return {};
   }
