@@ -8,6 +8,5 @@ const Output = ({ outputval }) => (
 );
 
 Output.propTypes = { outputval: PropTypes.string.isRequired };
-// Output.defaultProps = { outputval: '' };
 
 export default Output;
