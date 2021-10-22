@@ -1,16 +1,17 @@
-.grid {
+.calculator-container {
+  max-width: 1000px;
+  margin: 5em auto;
+}
+
+.grid-container {
   display: grid;
   grid-template-areas:
     'result result result result'
     'AC add-sub modulus divide'
     'seven eight nine cross'
     'four five six minus'
-    'one two three plus'
-    'zero0 zero0 dott equal';
-}
-
-.operation {
-  background-color: orange;
+    'one two three add'
+    'zero zero dot equal';
 }
 
 .result {
@@ -84,17 +85,72 @@
 }
 
 .add {
-  grid-area: plus;
+  grid-area: add;
 }
 
 .zero {
-  grid-area: zero0;
+  grid-area: zero;
 }
 
 .dot {
-  grid-area: dott;
+  grid-area: dot;
 }
 
 .equal {
   grid-area: equal;
+}
+
+.ac,
+.add-sub,
+.modulus,
+.seven,
+.eight,
+.nine,
+.four,
+.five,
+.six,
+.one,
+.two,
+.three,
+.zero,
+.dot,
+.equal {
+  background-color: #e0e0e0;
+}
+
+.divide,
+.cross,
+.minus,
+.add,
+.equal {
+  background-color: #f4913e;
+}
+
+.ac,
+.add-sub,
+.modulus,
+.divide,
+.seven,
+.eight,
+.nine,
+.cross,
+.four,
+.five,
+.six,
+.minus,
+.one,
+.two,
+.three,
+.add,
+.zero,
+.dot,
+.equal {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 1.5em 1em;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #707070;
 }
