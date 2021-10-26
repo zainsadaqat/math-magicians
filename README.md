@@ -22,6 +22,8 @@ Go To Terminal and paste the following command:
 
 `cd math-magicianss`
 
+`npm install`
+
 `npm start`
 
 ## Authors
