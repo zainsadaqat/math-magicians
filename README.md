@@ -26,6 +26,10 @@ Go To Terminal and paste the following command:
 
 `npm start`
 
+## Live Project
+
+[Math Magicians on Netlify](https://math-magician-app.netlify.app/)
+
 ## Authors
 
 👤 **Zain Sadaqat**
