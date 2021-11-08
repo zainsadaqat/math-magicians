@@ -28,8 +28,8 @@ Go To Terminal and paste the following command:
 
 ## Live Project
 
-[Math Magicians on Netlify](https://math-magician-app.netlify.app/)
-[Math Magicians on Heroku](https://math-magicians-21.herokuapp.com/)
+- [Math Magicians on Netlify](https://math-magician-app.netlify.app/)
+- [Math Magicians on Heroku](https://math-magicians-21.herokuapp.com/)
 
 ## Authors
 
