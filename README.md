@@ -10,6 +10,7 @@ Additional description about the project and its features.
 
 ## Built With
 
+- Pair Programming
 - JavaScript
 - React
 - HTML, CSS, JSX, WebPack, Git, GitHub
